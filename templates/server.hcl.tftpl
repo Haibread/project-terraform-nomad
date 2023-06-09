@@ -1,0 +1,27 @@
+datacenter = "dc1"
+
+
+bind_addr = "${BIND_IP_ADDRESS}"
+data_dir  = "/var/lib/nomad"
+
+
+advertise {
+  serf = "${PRIVATE_IP}:4648"
+  rpc  = "${PRIVATE_IP}:4647"
+  http = "${PRIVATE_IP}:4646"
+}
+
+server {
+  enabled = true
+  bootstrap_expect = ${SERVER_COUNT}
+  server_join {
+    retry_join = ["${SERVER_IP}"]
+  }
+}
+
+client {
+  enabled = true
+  options = {
+    "driver.raw_exec.enable" = "1"
+  }
+}
