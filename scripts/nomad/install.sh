@@ -44,3 +44,12 @@ sudo mkdir -p /etc/sysconfig/
 sudo mv /tmp/nomad_flags /etc/sysconfig/nomad
 sudo chown root:root /etc/sysconfig/nomad
 sudo chmod 0644 /etc/sysconfig/nomad
+
+# Install Grafana agent
+chmod 777 /etc/grafana-agent.yaml
+mkdir -p /etc/apt/keyrings/
+wget -q -O - https://apt.grafana.com/gpg.key | gpg --dearmor | sudo tee /etc/apt/keyrings/grafana.gpg > /dev/null
+echo "deb [signed-by=/etc/apt/keyrings/grafana.gpg] https://apt.grafana.com stable main" | sudo tee /etc/apt/sources.list.d/grafana.list
+apt-get update -y
+apt-get -o Dpkg::Options::="--force-confold" install grafana-agent -y
+systemctl start grafana-agent
