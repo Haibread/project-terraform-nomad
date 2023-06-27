@@ -1,0 +1,29 @@
+title: |md
+  # Un job de test pour Hashicorp Nomad
+| {
+  near: top-center
+  shape: text
+}
+
+direction: up
+
+scaleway: Scaleway{
+nomad-server0: {
+  label: Instance Nomad-0\n Client et Serveur
+}
+nomad-server1: {
+  label: Instance Nomad-1\n Client et Serveur
+  job-nomad-0: {
+    label: Job de test\n Hashicorp Nomad
+    shape: image
+    icon: https://www.svgrepo.com/show/448241/nomad.svg
+  }
+}
+nomad-server2: {
+  label: Instance Nomad-2\n Client et Serveur
+}
+}
+
+client: Client
+
+client -> scaleway.nomad-server1.job-nomad-0: Test de connectivité

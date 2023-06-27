@@ -1,0 +1,51 @@
+title: |md
+  # Supervision de Hashicorp Nomad
+| {
+  near: top-center
+  shape: text
+}
+
+#direction: right
+
+nomad-server0: {
+  label: Instance Nomad-0
+  grafana-agent: {
+    label: Agent Grafana
+    shape: image
+    icon: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Grafana_icon.svg/1969px-Grafana_icon.svg.png
+  }
+}
+nomad-server1: {
+  label: Instance Nomad-1
+  grafana-agent: {
+    label: Agent Grafana
+    shape: image
+    icon: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Grafana_icon.svg/1969px-Grafana_icon.svg.png
+  }
+}
+nomad-server2: {
+  label: Instance Nomad-2
+  grafana-agent: {
+    label: Agent Grafana
+    shape: image
+    icon: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Grafana_icon.svg/1969px-Grafana_icon.svg.png
+  }
+}
+
+monitoring-0: Instance Monitoring-0{
+    prometheus{
+        label: Prometheus
+        shape: image
+        icon: https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Prometheus_software_logo.svg/775px-Prometheus_software_logo.svg.png
+    }
+    grafana{
+        label: Grafana
+        shape: image
+        icon: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Grafana_icon.svg/1969px-Grafana_icon.svg.png
+    
+    }
+    grafana<->prometheus: Requête des métriques
+}
+nomad-server0 -> monitoring-0.prometheus: Envoi des métriques
+nomad-server1 -> monitoring-0.prometheus: Envoi des métriques
+nomad-server2 -> monitoring-0.prometheus: Envoi des métriques

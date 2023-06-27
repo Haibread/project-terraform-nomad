@@ -1,0 +1,29 @@
+title: |md
+# Déploiements des instances sur Scaleway
+| {
+    near: top-center
+    shape: text
+}
+
+direction: up
+
+scaleway: Scaleway {
+    nomad-server0: {
+        label: Instance Nomad-0\n Client et Serveur
+    }
+    nomad-server1: {
+        label: Instance Nomad-1\n Client et Serveur
+    }
+    nomad-server2: {
+        label: Instance Nomad-2\n Client et Serveur
+    }
+    monitoring-server-0:{
+        label: Instance Monitoring-0\n Serveur de supervision
+    }
+}
+
+terraform: Client Terraform{  
+    shape: image
+    icon: https://www.svgrepo.com/show/376353/terraform.svg
+}
+terraform -> scaleway : "Création des instances"
