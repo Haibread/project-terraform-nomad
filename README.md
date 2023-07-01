@@ -68,7 +68,7 @@ Arrivé à la fin de l'exécution de Terraform, vous aurez en sortie les adresse
 - Grafana
 - Les hôtes de Nomad
 
-Une vidéo du déploiement est disponible ici : <>
+Une vidéo du déploiement est disponible ici : <https://asciinema.org/a/3ZRuyf7rmRXqLR1EnYVwErD2l>
 
 ## Exploration des applicatifs
 
