@@ -2,7 +2,7 @@ job "2048-game" {
     datacenters = ["dc1"]  
     type = "service"
     group "game" {
-      count = 1 # number of instances
+      count = 3 # number of instances
   
       network {
         port "http" {

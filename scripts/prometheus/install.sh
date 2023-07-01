@@ -21,6 +21,7 @@ mkdir /etc/grafana
 mkdir /etc/grafana/dashboards
 chmod -R 755 /etc/grafana
 
-wget https://grafana.com/api/dashboards/6278/revisions/1/download -O /etc/grafana/dashboards/nomad.json
+## moved to terraform
+##wget https://grafana.com/api/dashboards/6278/revisions/1/download -O /etc/grafana/dashboards/nomad.json
 
-docker run -d -p 3000:3000 --name=grafana -v /etc/grafana/dashboards:/etc/grafana/dashboards grafana/grafana
+docker run -d -p 3000:3000 --name=grafana -v /etc/grafana/dashboards:/etc/grafana/dashboards -e "GF_INSTALL_PLUGINS=natel-discrete-panel" grafana/grafana

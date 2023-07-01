@@ -3,9 +3,13 @@ terraform {
     scaleway = {
       source = "scaleway/scaleway"
     }
-  
+
     nomad = {
       source = "hashicorp/nomad"
+    }
+    grafana = {
+      source  = "grafana/grafana"
+      version = "1.42.0"
     }
   }
   required_version = ">= 0.13"
@@ -19,4 +23,9 @@ provider "scaleway" {
 
 provider "nomad" {
   address = "http://${scaleway_instance_server.nomad-server.0.public_ip}:4646"
+}
+
+provider "grafana"{
+  url = "http://${scaleway_instance_server.monitoring.public_ip}:3000"
+  auth = "admin:admin"
 }
