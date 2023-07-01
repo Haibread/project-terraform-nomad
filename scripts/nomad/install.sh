@@ -31,7 +31,7 @@ chmod +x /usr/local/bin/nomad
 
 # Configure Nomad
 cat >/tmp/nomad_flags <<EOF
-NOMAD_FLAGS="-server -data-dir /opt/nomad/data -config /etc/nomad.d"
+NOMAD_FLAGS="-server -data-dir /opt/nomad/data -config /etc/nomad.d -bootstrap-expect=3"
 EOF
 
 # Configure Systemd
