@@ -16,7 +16,9 @@ resource "grafana_folder" "nomad" {
 }
 
 resource "grafana_dashboard" "nomad-cluster" {
-  config_json  = file("./dashboards/nomad-cluster_rev1.json")
+  config_json  = templatefile("./dashboards/nomad-cluster_rev1.json.tftpl", {
+    PROMETHEUS_UID = grafana_data_source.prometheus.uid
+  })
   folder = grafana_folder.nomad.id
   depends_on = [time_sleep.wait_20_seconds_grafana]
 }

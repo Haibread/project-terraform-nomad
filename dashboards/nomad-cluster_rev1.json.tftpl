@@ -51,7 +51,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "f5abe4a2-9702-4697-b766-996c9bdfb04e"
+        "uid": "${PROMETHEUS_UID}"
       },
       "fieldConfig": {
         "defaults": {
@@ -146,7 +146,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "f5abe4a2-9702-4697-b766-996c9bdfb04e"
+            "uid": "${PROMETHEUS_UID}"
           },
           "editorMode": "code",
           "expr": "nomad_client_unallocated_cpu{datacenter=~\"$datacenter\", host=~\"$host\"}/(nomad_client_unallocated_cpu{datacenter=~\"$datacenter\", host=~\"$host\"}+nomad_client_allocated_cpu{datacenter=~\"$datacenter\", host=~\"$host\"})",
@@ -163,7 +163,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "f5abe4a2-9702-4697-b766-996c9bdfb04e"
+        "uid": "${PROMETHEUS_UID}"
       },
       "fieldConfig": {
         "defaults": {
@@ -258,7 +258,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "f5abe4a2-9702-4697-b766-996c9bdfb04e"
+            "uid": "${PROMETHEUS_UID}"
           },
           "editorMode": "code",
           "expr": "nomad_client_unallocated_memory{datacenter=~\"$datacenter\", host=~\"$host\"}/(nomad_client_unallocated_memory{datacenter=~\"$datacenter\", host=~\"$host\"}+nomad_client_allocated_memory{datacenter=~\"$datacenter\", host=~\"$host\"})",
@@ -275,7 +275,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "f5abe4a2-9702-4697-b766-996c9bdfb04e"
+        "uid": "${PROMETHEUS_UID}"
       },
       "fieldConfig": {
         "defaults": {
@@ -371,7 +371,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "f5abe4a2-9702-4697-b766-996c9bdfb04e"
+            "uid": "${PROMETHEUS_UID}"
           },
           "editorMode": "code",
           "expr": "nomad_client_unallocated_disk{datacenter=~\"$datacenter\", host=~\"$host\"}/(nomad_client_unallocated_disk{datacenter=~\"$datacenter\", host=~\"$host\"}+nomad_client_allocated_disk{datacenter=~\"$datacenter\", host=~\"$host\"})",
@@ -396,7 +396,7 @@
       "crosshairColor": "#8F070C",
       "datasource": {
         "type": "prometheus",
-        "uid": "f5abe4a2-9702-4697-b766-996c9bdfb04e"
+        "uid": "${PROMETHEUS_UID}"
       },
       "display": "timeline",
       "expandFromQueryS": 0,
@@ -434,7 +434,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "f5abe4a2-9702-4697-b766-996c9bdfb04e"
+            "uid": "${PROMETHEUS_UID}"
           },
           "expr": "nomad_client_allocations_migrating{datacenter=~\"$datacenter\", host=~\"$host\"}",
           "format": "time_series",
@@ -445,7 +445,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "f5abe4a2-9702-4697-b766-996c9bdfb04e"
+            "uid": "${PROMETHEUS_UID}"
           },
           "expr": "nomad_client_allocations_blocked{datacenter=~\"$datacenter\", host=~\"$host\"}",
           "format": "time_series",
@@ -456,7 +456,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "f5abe4a2-9702-4697-b766-996c9bdfb04e"
+            "uid": "${PROMETHEUS_UID}"
           },
           "expr": "nomad_client_allocations_pending{datacenter=~\"$datacenter\", host=~\"$host\"}",
           "format": "time_series",
@@ -467,7 +467,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "f5abe4a2-9702-4697-b766-996c9bdfb04e"
+            "uid": "${PROMETHEUS_UID}"
           },
           "expr": "nomad_client_allocations_running{datacenter=~\"$datacenter\", host=~\"$host\"}",
           "format": "time_series",
@@ -478,7 +478,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "f5abe4a2-9702-4697-b766-996c9bdfb04e"
+            "uid": "${PROMETHEUS_UID}"
           },
           "expr": "nomad_client_allocations_terminal{datacenter=~\"$datacenter\", host=~\"$host\"}",
           "format": "time_series",
@@ -534,7 +534,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "f5abe4a2-9702-4697-b766-996c9bdfb04e"
+        "uid": "${PROMETHEUS_UID}"
       },
       "fieldConfig": {
         "defaults": {
@@ -600,7 +600,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "f5abe4a2-9702-4697-b766-996c9bdfb04e"
+            "uid": "${PROMETHEUS_UID}"
           },
           "editorMode": "code",
           "expr": "nomad_client_uptime{datacenter=~\"$datacenter\", host=~\"$host\"}",
@@ -621,7 +621,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "f5abe4a2-9702-4697-b766-996c9bdfb04e"
+        "uid": "${PROMETHEUS_UID}"
       },
       "fill": 1,
       "fillGradient": 0,
@@ -664,7 +664,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "f5abe4a2-9702-4697-b766-996c9bdfb04e"
+            "uid": "${PROMETHEUS_UID}"
           },
           "expr": "nomad_client_host_memory_total{datacenter=~\"$datacenter\", host=~\"$host\"}",
           "format": "time_series",
@@ -675,7 +675,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "f5abe4a2-9702-4697-b766-996c9bdfb04e"
+            "uid": "${PROMETHEUS_UID}"
           },
           "expr": "nomad_client_host_memory_free{datacenter=~\"$datacenter\", host=~\"$host\"}",
           "format": "time_series",
@@ -687,7 +687,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "f5abe4a2-9702-4697-b766-996c9bdfb04e"
+            "uid": "${PROMETHEUS_UID}"
           },
           "expr": "nomad_client_host_memory_used{datacenter=~\"$datacenter\", host=~\"$host\"}",
           "format": "time_series",
@@ -698,7 +698,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "f5abe4a2-9702-4697-b766-996c9bdfb04e"
+            "uid": "${PROMETHEUS_UID}"
           },
           "expr": "nomad_client_host_memory_available{datacenter=~\"$datacenter\", host=~\"$host\"}",
           "format": "time_series",
@@ -744,7 +744,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "f5abe4a2-9702-4697-b766-996c9bdfb04e"
+        "uid": "${PROMETHEUS_UID}"
       },
       "fill": 1,
       "fillGradient": 0,
@@ -787,7 +787,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "f5abe4a2-9702-4697-b766-996c9bdfb04e"
+            "uid": "${PROMETHEUS_UID}"
           },
           "expr": "max(nomad_client_host_disk_size{datacenter=~\"$datacenter\", host=~\"$host\"}) by (disk)",
           "format": "time_series",
@@ -798,7 +798,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "f5abe4a2-9702-4697-b766-996c9bdfb04e"
+            "uid": "${PROMETHEUS_UID}"
           },
           "expr": "avg(nomad_client_host_disk_available{datacenter=~\"$datacenter\", host=~\"$host\"}) by (disk)",
           "format": "time_series",
@@ -845,7 +845,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "f5abe4a2-9702-4697-b766-996c9bdfb04e"
+        "uid": "${PROMETHEUS_UID}"
       },
       "fill": 1,
       "fillGradient": 0,
@@ -888,7 +888,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "f5abe4a2-9702-4697-b766-996c9bdfb04e"
+            "uid": "${PROMETHEUS_UID}"
           },
           "expr": "avg(nomad_client_host_disk_inodes_percent{datacenter=~\"$datacenter\", host=~\"$host\"}) by (disk)",
           "format": "time_series",
@@ -946,7 +946,7 @@
         },
         "datasource": {
           "type": "prometheus",
-          "uid": "f5abe4a2-9702-4697-b766-996c9bdfb04e"
+          "uid": "${PROMETHEUS_UID}"
         },
         "definition": "",
         "hide": 0,
@@ -973,7 +973,7 @@
         },
         "datasource": {
           "type": "prometheus",
-          "uid": "f5abe4a2-9702-4697-b766-996c9bdfb04e"
+          "uid": "${PROMETHEUS_UID}"
         },
         "definition": "",
         "hide": 0,
